@@ -1,0 +1,11 @@
+version: "3"
+services:
+  cangate-source:
+    container_name: cangate
+    build:
+      context: .  # Убедитесь, что контекст указывает на правильную директорию, где находится Dockerfile
+      dockerfile: Dockerfile  # Убедитесь, что имя Dockerfile правильно указано
+    ports:
+      - "4444:4444"
+    volumes:
+      - ./cangate-source:/usr/src/app
